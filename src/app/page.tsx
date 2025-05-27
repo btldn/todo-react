@@ -13,10 +13,15 @@ export default function Home() {
     setTasks(prev => [...prev, task]);
   };
 
+  const handleDeleteTask = (index: number) => {
+    setTasks(prev => prev.filter((_, i) => i !== index));
+  };
+3
+
   return (
     <div>
       <Inputs onAdd={handleAddTask} />
-      <TodoList tasks={tasks} />
+      <TodoList onDelete={handleDeleteTask} tasks={tasks} />
     </div>
   )
 }
