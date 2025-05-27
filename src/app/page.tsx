@@ -1,7 +1,10 @@
+"use client"
+
 import React from 'react';
 import { useState } from 'react';
 
 import { Inputs, Task } from '@/components/Inputs/Inputs';
+import { TodoList } from '@/components/TodoList/TodoList';
 
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -13,6 +16,7 @@ export default function Home() {
   return (
     <div>
       <Inputs onAdd={handleAddTask} />
-      <ToDoList tasks={tasks} />
+      <TodoList tasks={tasks} />
     </div>
   )
+}
