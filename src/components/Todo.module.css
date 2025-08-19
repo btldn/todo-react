@@ -1,0 +1,37 @@
+.todo__task {
+    padding: 15px 15px;
+    background-color: #FAFAFA;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo__taskCheck {
+    margin-right: 5px;
+}
+
+.todo__taskDeleteBtn {
+    margin-right: 10px;
+    border: none;
+    padding: 5px;
+    background-color: rgb(248, 120, 120);
+    color: white;
+    cursor: pointer;
+}
+
+.todo__taskDeleteBtn:hover {
+    background-color: rgb(248, 144, 144);
+}
+
+.todo__taskEditBtn {
+    border: none;
+    padding: 5px;
+    background-color: rgb(37, 120, 243);
+    color: white;
+    cursor: pointer;
+}
+
+.todo__taskEditBtn:hover {
+    background-color: rgb(83, 147, 243);
+}
