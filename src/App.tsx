@@ -14,17 +14,23 @@ type Task = {
   completed: boolean;
 }
 
+
+
 function App(props: DataProps) {
   const [todos, setTodos] = useState<Task[]>([])
+  
+  const taskList = props.tasks?.map((todo) => <Todo id={todo.id} task={todo.task} completed={todo.completed} key={todo.id}/>)
+  console.log(taskList)
 
   return (
     <>
       <div className="todo__wrapper">
         <Input />
         <ul className="todo__listWrapper" aria-labelledby="list-heading">
-          <Todo id="todo-0" task="Eat" completed />
+          {/* <Todo id="todo-0" task="Eat" completed />
           <Todo id="todo-1" task="Sumka" />
-          <Todo id="todo-2" task="Airplane"  />
+          <Todo id="todo-2" task="Airplane"  /> */}
+          {taskList}
         </ul>
 
       </div>
