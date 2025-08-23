@@ -25,12 +25,30 @@ function App(props: DataProps) {
       task={todo.task}
       completed={todo.completed}
       key={todo.id}
+      toggleTodoCompleted={toggleTodoCompleted}
+      deleteTask={deleteTask}
     />
   ));
 
+  function toggleTodoCompleted(id: string) {
+    const updatedTodos = todos.map((todo) => {
+    if (id === todo.id) {
+      return { ...todo, completed: !todo.completed };
+      
+    }
+    return todo;
+  });
+    setTodos(updatedTodos);
+  }
+
   function addTask(task: string) {
-    let newTodo = {id: `todo-${nanoid()}`, task, completed: false}
+    let newTodo = { id: `todo-${nanoid()}`, task, completed: false }
     setTodos([...todos, newTodo]);
+  }
+
+  function deleteTask(id: string) {
+      const remainingTasks = todos.filter((todo) => id !== todo.id);
+      setTodos(remainingTasks);
   }
 
   return (

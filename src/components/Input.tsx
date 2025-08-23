@@ -23,7 +23,15 @@ function Input(props: InputProps) {
         <div className={styles.todo__headerWrapper}>
             <h1 className={styles.todo__headerTitle}>ToDo App</h1>
             <form className={styles.todo__headerForm} onSubmit={handleSubmit}>
-                <input className={styles.todo__headerInput} id="task" name="task" type="text" value={task} onChange={handleChange} placeholder='New task...' autoComplete="off" required></input>
+                <input className={styles.todo__headerInput} 
+                    id="task" 
+                    name="task" 
+                    type="text" value={task} 
+                    onChange={handleChange} 
+                    placeholder='New task...' 
+                    autoComplete="off" 
+                    required>
+                </input>
                 <button className={styles.todo__headerAddButton} type='submit'>+</button>
             </form>
             <div className={styles.todo__headerFilters}>
