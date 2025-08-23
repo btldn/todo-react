@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { nanoid } from "nanoid";
+
 import './App.css'
 
 import Input from './components/Input'
@@ -14,22 +16,28 @@ type Task = {
   completed: boolean;
 }
 
-
-
 function App(props: DataProps) {
-  const [todos, setTodos] = useState<Task[]>([])
-  
-  const taskList = props.tasks?.map((todo) => <Todo id={todo.id} task={todo.task} completed={todo.completed} key={todo.id}/>)
-  console.log(taskList)
+  const [todos, setTodos] = useState(props.tasks)
+
+  const taskList = todos?.map((todo) => (
+    <Todo
+      id={todo.id}
+      task={todo.task}
+      completed={todo.completed}
+      key={todo.id}
+    />
+  ));
+
+  function addTask(task: string) {
+    let newTodo = {id: `todo-${nanoid()}`, task, completed: false}
+    setTodos([...todos, newTodo]);
+  }
 
   return (
     <>
       <div className="todo__wrapper">
-        <Input />
+        <Input onSubmit={addTask} />
         <ul className="todo__listWrapper" aria-labelledby="list-heading">
-          {/* <Todo id="todo-0" task="Eat" completed />
-          <Todo id="todo-1" task="Sumka" />
-          <Todo id="todo-2" task="Airplane"  /> */}
           {taskList}
         </ul>
 
