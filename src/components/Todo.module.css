@@ -35,3 +35,48 @@
 .todo__taskEditBtn:hover {
     background-color: rgb(83, 147, 243);
 }
+
+.todo__taskEditInput {
+    padding: 10px 10px;
+    min-width: 470px;
+    outline: none;
+    border: 2px rgb(37, 120, 243) solid;
+    margin-bottom: 10px;
+}
+
+.todo__taskEditButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.todo__taskEditApprove {
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 2px rgb(37, 120, 243) solid;
+    cursor: pointer;
+    font-size: 16px;
+    min-width: 225px;
+    font-weight: bold;
+}
+
+.todo__taskEditApprove:hover {
+    transition: 0.2s;
+    background-color: rgb(37, 120, 243);
+    color: white;
+}
+
+.todo__taskEditDeny {
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 2px rgb(248, 120, 120) solid;
+    cursor: pointer;
+    font-size: 16px;
+    min-width: 225px;
+    font-weight: bold;
+}
+
+.todo__taskEditDeny:hover {
+    transition: 0.2s;
+    background-color: rgb(248, 120, 120);
+    color: white;
+}

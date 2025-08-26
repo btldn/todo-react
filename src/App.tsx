@@ -27,6 +27,7 @@ function App(props: DataProps) {
       key={todo.id}
       toggleTodoCompleted={toggleTodoCompleted}
       deleteTask={deleteTask}
+      editTask={editTask}
     />
   ));
 
@@ -50,6 +51,16 @@ function App(props: DataProps) {
       const remainingTasks = todos.filter((todo) => id !== todo.id);
       setTodos(remainingTasks);
   }
+
+  function editTask(id: string, newName: string) {
+  const editedTodoList = todos.map((todo) => {
+    if (id === todo.id) {
+      return { ...todo, task: newName };
+    }
+    return todo;
+  });
+  setTodos(editedTodoList);
+}
 
   return (
     <>

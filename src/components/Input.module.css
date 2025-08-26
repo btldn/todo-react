@@ -23,6 +23,7 @@
     padding: 10px 10px;
     min-width: 517px;
     outline: none;
+    border: 2px rgb(37, 120, 243) solid;
 }
 
 .todo__headerAddButton {
