@@ -35,6 +35,7 @@ function Todo(props: TodoProps) {
                     type="text"
                     value={newName}
                     onChange={handleChange}
+                    required
                 />
             </div>
             <div className={styles.todo__taskEditButtons}>

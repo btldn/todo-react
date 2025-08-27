@@ -1,0 +1,17 @@
+
+.todo__headerFilterBtn {
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 2px rgb(37, 120, 243) solid;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.todo__headerFilterBtn__active {
+    padding: 5px;
+    background-color: rgb(37, 120, 243);
+    border: 2px rgb(255, 255, 255) solid;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}

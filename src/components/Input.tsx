@@ -34,11 +34,6 @@ function Input(props: InputProps) {
                 </input>
                 <button className={styles.todo__headerAddButton} type='submit'>+</button>
             </form>
-            <div className={styles.todo__headerFilters}>
-                <button className={styles.todo__headerFilterBtn__active} type="button" aria-pressed="true">All</button>
-                <button className={styles.todo__headerFilterBtn} type="button" aria-pressed="false">Active</button>
-                <button className={styles.todo__headerFilterBtn} type="button" aria-pressed="false">Completed</button>
-            </div>
         </div>
     )
 }

@@ -28,3 +28,9 @@ a {
   padding: 25px;
   overflow: auto;
 }
+
+.todo__headerFilters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
